@@ -1,0 +1,20 @@
+<h1 style="text-align: center">Termékek</h1>
+<mat-grid-list cols="3" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let product of products">
+    <mat-card class="product-card">
+      <mat-card-header>
+        <h2 mat-card-title style="color: #fff;">{{ product.name }}</h2>
+        <mat-card-subtitle style="color: #fff;">{{ product.manufacturer }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p style="color: #fff;">{{ product.description }}</p>
+        <p style="color: #fff;"><strong>Ár:</strong> {{ product.price }} Ft</p>
+        <p style="color: #fff;"><strong>Készleten:</strong> {{ product.stock }} db</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" style="color: #fff;" (click)="addToCart(product)">Kosárba</button>
+        <a mat-button style="color: #fff;" [routerLink]="['/products', product.id]">Részletek</a>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

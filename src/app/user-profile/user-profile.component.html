@@ -1,0 +1,26 @@
+<div  *ngIf="user" style="text-align: center;">
+  <h2 class="centered">Profilom</h2>
+  <form (ngSubmit)="updateProfile()" #form="ngForm">
+    <mat-form-field appearance="outline" class="centered">
+      <mat-label>Email cím:</mat-label>
+      <input type="email" matInput [(ngModel)]="user.email" name="email" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="centered">
+      <mat-label>Megjelenített név:</mat-label>
+      <input type="text" matInput [(ngModel)]="user.displayName" name="displayName">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="centered">
+      <mat-label>Új jelszó:</mat-label>
+      <input type="password" matInput [(ngModel)]="password" name="password" placeholder="Jelszo">
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary" [disabled]="form.invalid">Profil frissítése</button>
+    <br>
+    <br>
+    <button type="button" mat-raised-button color="primary" (click)="updatePassword()">Jelszó frissítése</button>
+    <br>
+    <br>
+    <button type="button" mat-raised-button color="warn" (click)="deleteProfile()">Profil törlése</button>
+    <br>
+    <br>
+  </form>
+</div>

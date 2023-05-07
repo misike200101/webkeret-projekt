@@ -1,0 +1,18 @@
+<form>
+  <mat-form-field>
+    <input matInput [(ngModel)]="product.name" [ngModelOptions]="{standalone: true}" placeholder="Név">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="product.manufacturer" [ngModelOptions]="{standalone: true}" placeholder="Gyártó">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="product.description" [ngModelOptions]="{standalone: true}" placeholder="Leírás"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="product.price" [ngModelOptions]="{standalone: true}" type="number" placeholder="Ár">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="product.stock" [ngModelOptions]="{standalone: true}" type="number" placeholder="Készlet">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="save()">Mentés</button>
+</form>

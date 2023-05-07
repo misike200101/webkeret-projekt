@@ -1,0 +1,19 @@
+<h1 style="text-align: center; color: white;">{{ product?.name }}</h1>
+<div class="product-detail" style="text-align: center; display: flex; justify-content: center;">
+  <div style="background-color: #007bff; border: 1px solid #007bff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+    <mat-card>
+      <mat-card-header>
+        <h2 mat-card-title style="color: white">{{ product?.name }}</h2>
+        <mat-card-subtitle style="color: white">{{ product?.manufacturer }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content style="color: white">
+        <p>{{ product?.description }}</p>
+        <p><strong>Ár:</strong> {{ product?.price }} Ft</p>
+        <p><strong>Készleten:</strong> {{ product?.stock }} db</p>
+      </mat-card-content>
+      <mat-card-actions style="display: flex; justify-content: center;">
+        <button mat-button color="primary" style="color: white" (click)="addToCart(product)">Kosárba</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="centered" style="display: flex; flex-direction: column; align-items: center;">
+  <h1>Bejelentkezés</h1>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="email" placeholder="E-mail cím">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="password" [(ngModel)]="password" placeholder="Jelszó">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="login()">Bejelentkezés</button>
+</div>

@@ -30,5 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Admin felület
 
 Az admin felület bejelentkezési adatai:
-admin@admin.com
-admin1
+
+E-mail cím: admin@admin.com
+
+Jelszó: admin1

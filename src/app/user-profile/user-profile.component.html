@@ -13,7 +13,7 @@
       <mat-label>Új jelszó:</mat-label>
       <input type="password" matInput [(ngModel)]="password" name="password" placeholder="Jelszo">
     </mat-form-field>
-    <button type="submit" mat-raised-button color="primary" [disabled]="form.invalid">Profil frissítése</button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="form.invalid ?? true">Profil frissítése</button>
     <br>
     <br>
     <button type="button" mat-raised-button color="primary" (click)="updatePassword()">Jelszó frissítése</button>
